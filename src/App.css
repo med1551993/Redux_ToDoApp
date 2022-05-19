@@ -1,0 +1,282 @@
+body {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+ 
+} 
+
+.App {
+height: 100%;
+width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.add_menu_1{
+  position:absolute;
+  z-index:999;
+ background-color: rgba(255, 255, 255, 0.7) ;
+ height: 100vh;
+  width: 100vw;
+  top: 0;
+}
+.add_menu_2 {
+  width: 400px;
+  height: 300px;
+  background-color: rgba(51, 51, 229, 0.644);
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.add_menu_2 input {
+  width: 350px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: bisque;
+}
+
+.add2 {
+  color: white;
+  background-color: rgba(4, 4, 105, 0.501);
+  font-size: 25px;
+  padding: 2px;
+  border-radius: 5px;
+  border: none;
+  align-items: center;
+  width: 30%;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+
+.add2:hover {
+  background-color: rgba(4, 4, 105, 0.8);
+}
+
+.btn_x {
+  margin-top: 8px;
+  margin-left: 350px;
+  color: white;
+  background-color: rgba(255, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_x:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+.title {
+  color: bisque;
+  margin-top: 20px;
+}
+
+.add {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bttn {
+
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 50px;
+  border: none;
+}
+
+.add .add_button {
+  color: white;
+  background-color: rgba(4, 4, 105, 0.501);
+  font-size: 25px;
+  padding: 3px;
+  border-radius: 10px;
+  border: none;
+  align-items: center;
+  width:170px;
+  color: white;
+  
+}
+
+.add .add_button:hover {
+  cursor: pointer;
+  background-color: rgba(4, 4, 105, 0.801);
+}
+
+/************** dropdown **************/
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  width:170px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content span:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.dropbtn:hover {
+  cursor: pointer;
+}
+
+
+/*************************************************************/
+
+
+.list {
+
+  width: 100vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.task {
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  color: black;
+  width: 50%;
+  height: 70px;
+  margin: 10px;
+  border-radius: 5px;
+}
+/****************************** Add Task Animation **************************************/
+.task {
+  opacity: 0;
+  animation: new-item-animation .3s linear forwards;
+}
+
+@keyframes new-item-animation {
+  from {
+      opacity: 0;
+      transform: translateX(-400px);
+}
+
+  to {
+      opacity: 1;
+      transform : translateX(0);
+  }
+}
+
+/**************************************************************************/
+.task h3 {
+  
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.task p {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: -10px;
+ 
+}
+
+.task_done h3,
+.task_done p {
+  text-decoration: line-through;
+}
+
+.task .fa-pen-to-square {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  position: absolute;
+  left: 91.7%;
+  top: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task .fa-pen-to-square:hover {
+
+  transform: scale(1.1);
+}
+
+.task .fa-trash-can:hover {
+
+  transform: scale(1.1);
+}
+
+.task .fa-trash-can {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  position: absolute;
+  left: 96%;
+  top: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent ;
+
+}
+
+
+
+.check {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  position: absolute;
+  left: 88%;
+  top: 45px;
+  cursor: pointer;
+}
+
